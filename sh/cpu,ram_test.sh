@@ -1,0 +1,1 @@
+while true; do echo "CPU: $(top -bn1 | grep "Cpu(s)" | awk '{print $2}')% | RAM: $(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2}')"; sleep 0.01; done

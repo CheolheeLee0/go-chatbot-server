@@ -42,8 +42,6 @@ _testmain.go
 *.exe
 *.test
 *.prof
-sh
-
 ### https://raw.github.com/github/gitignore/5a339cce0d8ccac36e71b077ef39a55c682d6d91/Global/JetBrains.gitignore
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
