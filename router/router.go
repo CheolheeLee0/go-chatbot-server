@@ -10,12 +10,7 @@ import (
 	"go-chatbot-server/handlers"
 
 	"github.com/gin-gonic/gin"
-	"github.com/google/generative-ai-go/genai"
-	"github.com/qdrant/go-client/qdrant"
-	"github.com/tmc/langchaingo/llms"
 	"go.uber.org/zap"
-
-	goopenai "github.com/sashabaranov/go-openai"
 
 	"github.com/gin-contrib/cors"
 )
@@ -25,19 +20,13 @@ type Router struct {
 	handler *handlers.Handler
 }
 
-func New(queries *db.Queries, logger *zap.Logger, db *sqldb.DB, geminiClient *genai.Client, llm llms.LLM, client *qdrant.Client, embeddingClient *goopenai.Client) *Router {
+func New(queries *db.Queries, logger *zap.Logger, db *sqldb.DB) *Router {
 	r := &Router{
 		engine:  gin.Default(),
-		handler: handlers.New(queries, logger, db, geminiClient, llm, client, embeddingClient),
+		handler: handlers.New(queries, logger, db),
 	}
 	config := cors.DefaultConfig()
 	config.AllowAllOrigins = true
-	// // CORS 설정 추가
-	// config := cors.DefaultConfig()
-	// config.AllowOrigins = []string{"http://localhost:3000"} // Flutter 웹 앱의 URL
-	// config.AllowMethods = []string{"GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"}
-	// config.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "Authorization"}
-	// config.AllowCredentials = true
 
 	r.engine.Use(cors.New(config))
 

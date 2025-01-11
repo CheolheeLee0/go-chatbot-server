@@ -26,7 +26,7 @@ type Handler struct {
 	embeddingClient *goopenai.Client
 }
 
-func New(queries *db.Queries, logger *zap.Logger, db *sqldb.DB, geminiClient *genai.Client, llm llms.LLM, client *qdrant.Client, embeddingClient *goopenai.Client) *Handler {
+func New(queries *db.Queries, logger *zap.Logger, db *sqldb.DB) *Handler {
 	return &Handler{
 		queries: queries,
 		logger:  logger,
@@ -38,9 +38,5 @@ func New(queries *db.Queries, logger *zap.Logger, db *sqldb.DB, geminiClient *ge
 				return true
 			},
 		},
-		geminiClient:    geminiClient,
-		llm:             llm,
-		client:          client,
-		embeddingClient: embeddingClient,
 	}
 }
