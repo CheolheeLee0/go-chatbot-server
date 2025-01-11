@@ -1,0 +1,13 @@
+{"level":"fatal","ts":"2024-08-04T04:00:45.373+0900","msg":"Failed to connect to database","error":"error connecting to the database: failed to connect to `host=fye-rds.cuhaqptbxij7.ap-northeast-2.rds.amazonaws.com user=postgres database=postgres`: server error (FATAL: no pg_hba.conf entry for host \"125.138.122.162\", user \"postgres\", database \"postgres\", no encryption (SQLSTATE 28000))"}
+{"level":"fatal","ts":"2024-08-04T04:01:57.123+0900","msg":"Failed to connect to database","error":"error connecting to the database: failed to connect to `host=fye-rds.cuhaqptbxij7.ap-northeast-2.rds.amazonaws.com user=postgres database=postgres`: server error (FATAL: no pg_hba.conf entry for host \"125.138.122.162\", user \"postgres\", database \"postgres\", no encryption (SQLSTATE 28000))"}
+{"level":"fatal","ts":"2024-08-04T04:03:36.938+0900","msg":"Failed to connect to database","error":"error connecting to the database: failed to connect to `host=fye-rds.cuhaqptbxij7.ap-northeast-2.rds.amazonaws.com user=postgres database=postgres`: server error (FATAL: no pg_hba.conf entry for host \"125.138.122.162\", user \"postgres\", database \"postgres\", no encryption (SQLSTATE 28000))"}
+{"level":"fatal","ts":"2024-08-04T04:16:35.881+0900","msg":"Failed to connect to database","error":"sql: unknown driver \"postgres\" (forgotten import?)"}
+{"level":"info","ts":"2024-08-04T04:26:42.499+0900","msg":"Starting server on :8081"}
+{"level":"error","ts":"2024-08-04T04:26:46.987+0900","msg":"Failed to list users","error":"failed to connect to `user=postgres database=postgres`: 43.200.229.130:5432 (fye-rds.cuhaqptbxij7.ap-northeast-2.rds.amazonaws.com): server error: FATAL: no pg_hba.conf entry for host \"125.138.122.162\", user \"postgres\", database \"postgres\", no encryption (SQLSTATE 28000)"}
+{"level":"info","ts":"2024-08-04T04:27:56.760+0900","msg":"Starting server on :8081"}
+{"level":"info","ts":"2024-08-04T04:28:00.298+0900","msg":"Users listed successfully","limit":10,"offset":0}
+{"level":"info","ts":"2024-08-04T04:28:10.442+0900","msg":"User created successfully","user_id":1}
+{"level":"info","ts":"2024-08-04T04:28:13.993+0900","msg":"Users listed successfully","limit":10,"offset":0}
+{"level":"info","ts":"2024-08-04T05:09:01.487+0900","msg":"Starting server on :8081"}
+{"level":"info","ts":"2024-08-04T05:09:17.617+0900","msg":"Starting server on :8081"}
+{"level":"info","ts":"2024-08-04T05:09:52.308+0900","msg":"Starting server on :8081"}
